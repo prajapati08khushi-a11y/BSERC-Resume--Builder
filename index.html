@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Resume Builder</h1>
+        <p>Create your professional resume easily</p>
+    </header>
+
+    <main class="container">
+
+        <section class="form-section">
+            <h2>Enter Your Details</h2>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label for="skills">Skills</label>
+            <textarea id="skills" placeholder="Enter your skills"></textarea>
+
+            <label for="education">Education</label>
+            <textarea id="education" placeholder="Enter your education"></textarea>
+
+            <label for="projects">Projects</label>
+            <textarea id="projects" placeholder="Enter your projects"></textarea>
+
+            <label for="template">Choose Resume Template</label>
+            <select id="template">
+                <option value="template1">Professional</option>
+                <option value="template2">Modern</option>
+                <option value="template3">Simple</option>
+            </select>
+
+            <h3>Arrange Resume Sections</h3>
+            <div id="sectionList">
+                <div class="section-item" draggable="true" data-section="education">Education ↕</div>
+                <div class="section-item" draggable="true" data-section="skills">Skills ↕</div>
+                <div class="section-item" draggable="true" data-section="projects">Projects ↕</div>
+            </div>
+
+            <button id="printBtn">Export Resume as PDF</button>
+            <button id="saveBtn">Save Resume Data</button>
+
+            <label for="loadFile">Load Saved Resume</label>
+            <input type="file" id="loadFile" accept=".json">
+
+        </section>
+
+        <section class="preview-section">
+            <h2>Live Resume Preview</h2>
+
+            <div id="resumePreview" class="resume template1">
+                <h1 id="previewName">Your Name</h1>
+                <p id="previewEmail">your.email@example.com</p>
+
+                <div id="previewSections">
+                    <section id="educationSection">
+                        <h3>Education</h3>
+                        <p id="previewEducation">Your education details</p>
+                    </section>
+
+                    <section id="skillsSection">
+                        <h3>Skills</h3>
+                        <p id="previewSkills">Your skills</p>
+                    </section>
+
+                    <section id="projectsSection">
+                        <h3>Projects</h3>
+                        <p id="previewProjects">Your projects</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

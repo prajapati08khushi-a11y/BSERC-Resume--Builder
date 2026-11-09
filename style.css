@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f4f8;
+    color: #333;
+}
+
+header {
+    background: #243b55;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+    align-items: flex-start;
+}
+
+.form-section,
+.preview-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-section {
+    width: 40%;
+}
+
+.preview-section {
+    width: 60%;
+}
+
+.form-section h2,
+.preview-section h2 {
+    margin-bottom: 20px;
+    color: #243b55;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #243b55;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #141e30;
+}
+
+#sectionList {
+    margin-top: 10px;
+}
+
+.section-item {
+    background: #e8eef5;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: move;
+    border: 1px solid #ccd6e0;
+}
+
+.resume {
+    background: white;
+    width: 100%;
+    max-width: 794px;
+    min-height: 1123px;
+    padding: 45px;
+    margin: auto;
+    border: 1px solid #ddd;
+    color: #222;
+    overflow-wrap: anywhere;
+}
+
+.resume h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.resume h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #243b55;
+    padding-bottom: 5px;
+}
+
+.resume p {
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+
+.template1 {
+    border-top: 8px solid #243b55;
+}
+
+.template2 {
+    border-top: 8px solid #008b8b;
+}
+
+.template2 h3 {
+    color: #008b8b;
+    border-bottom-color: #008b8b;
+}
+
+.template3 {
+    border-top: 8px solid #8b4513;
+}
+
+.template3 h3 {
+    color: #8b4513;
+    border-bottom-color: #8b4513;
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    header,
+    .form-section,
+    .preview-section h2 {
+        display: none;
+    }
+
+    .container {
+        display: block;
+        padding: 0;
+    }
+
+    .preview-section {
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .resume {
+        width: 210mm;
+        min-height: 297mm;
+        max-width: none;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}
